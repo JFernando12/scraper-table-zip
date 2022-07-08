@@ -5,7 +5,7 @@ const start = async () => {
   let data = []
   const paginas = 3;
 
-  const browser = await puppeteer.launch({headless: true})
+  const browser = await puppeteer.launch({headless: false})
   const page = await browser.newPage();
 
   await page._client.send("Page.setDownloadBehavior", {
